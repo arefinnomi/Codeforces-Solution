@@ -25,33 +25,33 @@ using namespace std;
 
 int main()
 {
-    //while(1)
-    {
-        int n, m, ans = 0;
-        scanf("%d %d", &n, &m);
+	//while(1)
+	{
+		int n, m, ans = 0;
+		scanf("%d %d", &n, &m);
 
-        while( n != m)
-        {
-            if( m % 2 )
-            {
-                m++;
+		while( n != m)
+		{
+			if( m % 2 )
+			{
+				m++;
 
-            }
-
-
-            else if( n < m)
-            {
-                m /= 2;
-
-            }
-            else m++;
+			}
 
 
-            ans++;
-        }
+			else if( n < m)
+			{
+				m /= 2;
 
-        cout << ans<<endl;
-    }
+			}
+			else m++;
 
-    return 0;
+
+			ans++;
+		}
+
+		cout << ans<<endl;
+	}
+
+	return 0;
 }

@@ -25,16 +25,16 @@ using namespace std;
 
 int main()
 {
-    int n;
-    cin>>n;
+	int n;
+	cin>>n;
 
-    int in[n][2];
+	int in[n][2];
 
-    int home[100005] = {0}, away[100005] = {0};
+	int home[100005] = {0}, away[100005] = {0};
 
 
 
-    for(int i = 0; i < n; i++)
+	for(int i = 0; i < n; i++)
 	{
 		scanf("%d %d", &in[i][0], &in[i][1]);
 		home[in[i][0]]++, away[in[i][1]]++;
@@ -48,5 +48,5 @@ int main()
 
 
 
-    return 0;
+	return 0;
 }

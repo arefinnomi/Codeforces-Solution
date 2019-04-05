@@ -31,31 +31,31 @@ using namespace std;
 
 int main()
 {
-    int n;
+	int n;
 
-    vector < pair <int, int > > point;
-    bool flag = 1;
+	vector < pair <int, int > > point;
+	bool flag = 1;
 	cin>>n;
-    int x1, x2;
-    cin>>x1;
-    int pre = x1;
-    for(int i = 2; i <= n; i++)
-    {
-        x1 = pre;
-        cin>>x2;
-        pre = x2;
+	int x1, x2;
+	cin>>x1;
+	int pre = x1;
+	for(int i = 2; i <= n; i++)
+	{
+		x1 = pre;
+		cin>>x2;
+		pre = x2;
 
-        if( x1 > x2) swap(x1, x2);
+		if( x1 > x2) swap(x1, x2);
 
-        for(int j = 0; j < point.size() && flag; j++)
-        {
-            if( x1 > point[j].first && x1< point[j].second && x2 > point[j].second ) flag = 0;
-            if(  x1 < point[j].first && x2 < point[j].second && x2 > point[j].first) flag = 0;
+		for(int j = 0; j < point.size() && flag; j++)
+		{
+			if( x1 > point[j].first && x1< point[j].second && x2 > point[j].second ) flag = 0;
+			if(  x1 < point[j].first && x2 < point[j].second && x2 > point[j].first) flag = 0;
 
-        }
-        point.push_back(make_pair(x1, x2));
-    }
-    if(flag) cout<<"no\n";
-    else cout<<"yes\n";
-    return 0;
+		}
+		point.push_back(make_pair(x1, x2));
+	}
+	if(flag) cout<<"no\n";
+	else cout<<"yes\n";
+	return 0;
 }

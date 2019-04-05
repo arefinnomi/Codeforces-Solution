@@ -32,59 +32,59 @@ vector<int> re;
 
 void fun(int fa, int idx)
 {
-//    if(idx==n) return;
+//	if(idx==n) return;
 
 
-//    cout<<"fa = "<<fa<<" idx = "<<idx<<"\n";
-    int sum = 0;
+//	cout<<"fa = "<<fa<<" idx = "<<idx<<"\n";
+	int sum = 0;
 
 
-    for(int i = 0; i < re.size(); i++)
-    {
-//    	cout<<re[i]<<" ";
-        sum += re[i];
-    }
+	for(int i = 0; i < re.size(); i++)
+	{
+//		cout<<re[i]<<" ";
+		sum += re[i];
+	}
 
 //	nwl;
 //	cout<<"cont "<<cont;
 //	nwl;
 
-    if( sum <= r && sum >= l && re[re.size()-1] - re[0] >= x  )
-    {
-        cont++;
-    }
+	if( sum <= r && sum >= l && re[re.size()-1] - re[0] >= x  )
+	{
+		cont++;
+	}
 
-    for(int i = idx; i < n; i++)
-    {
-        re. push_back( sto[i] );
-        fun( idx, i + 1);
-        re.pop_back();
-    }
+	for(int i = idx; i < n; i++)
+	{
+		re. push_back( sto[i] );
+		fun( idx, i + 1);
+		re.pop_back();
+	}
 
-    return;
+	return;
 }
 
 
 int main()
 {
 
-    cin>>n>>l>>r>>x;
+	cin>>n>>l>>r>>x;
 
-    int temp;
-    for(int i = 0; i < n; i++)
-    {
-        cin >> temp;
-        sto.push_back(temp);
-    }
-    sort(sto.begin(), sto.end());
+	int temp;
+	for(int i = 0; i < n; i++)
+	{
+		cin >> temp;
+		sto.push_back(temp);
+	}
+	sort(sto.begin(), sto.end());
 
-    fun(0,0);
+	fun(0,0);
 
-    cout<<cont<<endl;
-
-
+	cout<<cont<<endl;
 
 
-//    main();
-    return 0;
+
+
+//	main();
+	return 0;
 }

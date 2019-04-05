@@ -22,31 +22,31 @@ using namespace std;
 
 int main()
 {
-    //while(true)
-    {
-        int n, m;
+	//while(true)
+	{
+		int n, m;
 
 
-        scanf("%d %d", &n, &m);
+		scanf("%d %d", &n, &m);
 
-        int i = m, work[m+1];
+		int i = m, work[m+1];
 
-        work[0] = 1;
+		work[0] = 1;
 
-        while(i--) scanf("%d", &work[m - i]);
+		while(i--) scanf("%d", &work[m - i]);
 
-        long long int time = 0;
+		long long int time = 0;
 
-        for( i = 0; i < m; i++)
-        {
-            if( work[i] > work[i+1] ) time += (long long )work[i+1] + n -  work[i];
-            else  time += (long long )work[i+1] -  work[i];
+		for( i = 0; i < m; i++)
+		{
+			if( work[i] > work[i+1] ) time += (long long )work[i+1] + n -  work[i];
+			else  time += (long long )work[i+1] -  work[i];
 
-            //cout<<time<<"  "<<work[i+1]<<endl;
-        }
+			//cout<<time<<"  "<<work[i+1]<<endl;
+		}
 
-        cout<<time<<endl;
-    }
+		cout<<time<<endl;
+	}
 
-    return 0;
+	return 0;
 }

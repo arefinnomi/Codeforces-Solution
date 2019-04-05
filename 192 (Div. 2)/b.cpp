@@ -25,16 +25,16 @@ using namespace std;
 
 int main()
 {
-    int n, m;
+	int n, m;
 
-    cin>>n>>m;
+	cin>>n>>m;
 
 	int a[2*m];
 
-    for(int i = 0; i < 2 * m; i++ )
-    {
-        scanf("%d", a + i);
-    }
+	for(int i = 0; i < 2 * m; i++ )
+	{
+		scanf("%d", a + i);
+	}
 
 	sort( a, a + 2*m );
 
@@ -44,11 +44,11 @@ int main()
 
 	cout<< n - 1 <<endl;
 
-    for(int i = 1; i <= n; i++)
-    {
-    	if(pure != i)cout<<pure<<" "<<i<<endl;
-    }
+	for(int i = 1; i <= n; i++)
+	{
+		if(pure != i)cout<<pure<<" "<<i<<endl;
+	}
 
-//    main();
-    return 0;
+//	main();
+	return 0;
 }

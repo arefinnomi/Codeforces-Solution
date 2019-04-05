@@ -25,42 +25,42 @@ using namespace std;
 
 int main()
 {
-    int num;
-    scanf("%d", &num);
-    getchar();
+	int num;
+	scanf("%d", &num);
+	getchar();
 
-    int temp = num-1;
+	int temp = num-1;
 
-    vector < char > unused;
-    vector < char > :: iterator it;;
+	vector < char > unused;
+	vector < char > :: iterator it;;
 
-    char key, room;
-    int cont = 0;
+	char key, room;
+	int cont = 0;
 
-    while(temp--)
-    {
-        scanf("%c%c", &key, &room);
+	while(temp--)
+	{
+		scanf("%c%c", &key, &room);
 
-        if(key == room+32) continue;
+		if(key == room+32) continue;
 
-        unused.push_back(key);
-        it = find(unused.begin(), unused.end(), room+32);
+		unused.push_back(key);
+		it = find(unused.begin(), unused.end(), room+32);
 
-        if( it == unused.end())
-        {
+		if( it == unused.end())
+		{
 
-        }
-        else
-        {
-            unused.erase(it);
-        }
-    }
-
-
-    cout<< unused.size()<<endl;
+		}
+		else
+		{
+			unused.erase(it);
+		}
+	}
 
 
+	cout<< unused.size()<<endl;
 
 
-    return 0;
+
+
+	return 0;
 }

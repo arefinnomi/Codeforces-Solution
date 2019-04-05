@@ -25,39 +25,39 @@ using namespace std;
 
 int main()
 {
-    int n;
+	int n;
 
-    cin>>n;
+	cin>>n;
 
-    int ary[n][2];
-    char flag[n];
+	int ary[n][2];
+	char flag[n];
 
 
-    int a = 0, g = 0;
+	int a = 0, g = 0;
 
-    for(int i = 0; i < n; i++)
-    {
-        scanf("%d %d", &ary[i][0], &ary[i][1]);
+	for(int i = 0; i < n; i++)
+	{
+		scanf("%d %d", &ary[i][0], &ary[i][1]);
 
-        if( ary[i][0] < ary[i][1])
-        {
-            if( abs( a + ary[i][0] - g) <= 500 ) flag[i] = 'A', a += ary[i][0];
-            else flag[i] = 'G', g += ary[i][1];
-        }
-        else
-        {
-            if( abs( a - ary[i][1] - g) <= 500 ) flag[i] = 'G', g += ary[i][1];
-            else flag[i] = 'A', a += ary[i][0];
-        }
+		if( ary[i][0] < ary[i][1])
+		{
+			if( abs( a + ary[i][0] - g) <= 500 ) flag[i] = 'A', a += ary[i][0];
+			else flag[i] = 'G', g += ary[i][1];
+		}
+		else
+		{
+			if( abs( a - ary[i][1] - g) <= 500 ) flag[i] = 'G', g += ary[i][1];
+			else flag[i] = 'A', a += ary[i][0];
+		}
 
-    }
+	}
 
 
 	for(int i = 0; i < n; i++) printf("%c", flag[i]) ;
 
-    nwl;
+	nwl;
 
 
 //	main();
-    return 0;
+	return 0;
 }

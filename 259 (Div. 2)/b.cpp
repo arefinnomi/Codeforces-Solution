@@ -52,5 +52,5 @@ int main()
 	if(flag) cout<<n-mid-1<<endl;
 	else cout<<-1<<endl;
 
-    return 0;
+	return 0;
 }

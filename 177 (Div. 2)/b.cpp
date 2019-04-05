@@ -25,16 +25,16 @@ using namespace std;
 
 int main()
 {
-    int n, m, d;
+	int n, m, d;
 
-    cin>>n>>m>>d;
-    int l = n * m;
-    int ary[l];
+	cin>>n>>m>>d;
+	int l = n * m;
+	int ary[l];
 
-    for(int i = 0; i < l; i++)
-    {
-        scanf("%d", ary + i);
-    }
+	for(int i = 0; i < l; i++)
+	{
+		scanf("%d", ary + i);
+	}
 
 	sort(ary, ary + l);
 
@@ -56,5 +56,5 @@ int main()
 
 
 //	main();
-    return 0;
+	return 0;
 }

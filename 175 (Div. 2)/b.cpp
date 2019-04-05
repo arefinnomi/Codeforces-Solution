@@ -5,46 +5,46 @@ using namespace std;
 
 int main()
 {
-    int n, s, t;
+	int n, s, t;
 
-    cin >> n >> s >> t;
+	cin >> n >> s >> t;
 
-    int ary[n+1];
+	int ary[n+1];
 
-    for(int i = 1; i <= n; i++) scanf("%d", &ary[i]);
-//    for(int i = 1; i <= n; i++) printf("%d %d\n", i, ary[i]);
-
-
-//    cout<<ary[2]<<endl<<endl;
+	for(int i = 1; i <= n; i++) scanf("%d", &ary[i]);
+//	for(int i = 1; i <= n; i++) printf("%d %d\n", i, ary[i]);
 
 
-    bool flag[n+1];
-
-    for(int i = 0; i <= n; i++) flag[i] = true;
+//	cout<<ary[2]<<endl<<endl;
 
 
-    int i = s;
+	bool flag[n+1];
 
-    int cont = 0;
-
-    while(flag[i])
-    {
-//        cout << i <<" ";
+	for(int i = 0; i <= n; i++) flag[i] = true;
 
 
-        if( i == t ) break;
+	int i = s;
 
-        flag[i] = false;
+	int cont = 0;
 
-//        cout<<ary[i]<<endl;
+	while(flag[i])
+	{
+//		cout << i <<" ";
 
-        i = ary[i];
-        cont++;
 
-    }
+		if( i == t ) break;
 
-//    cout<<endl;
+		flag[i] = false;
 
-    if( i == t ) cout << cont<<endl;
-    else cout << -1 <<endl;
+//		cout<<ary[i]<<endl;
+
+		i = ary[i];
+		cont++;
+
+	}
+
+//	cout<<endl;
+
+	if( i == t ) cout << cont<<endl;
+	else cout << -1 <<endl;
 }

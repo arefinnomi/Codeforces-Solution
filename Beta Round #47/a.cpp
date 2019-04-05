@@ -31,5 +31,5 @@ int main()
 
 	cout<<(int) (m*n) / 2 << endl;
 
-    return 0;
+	return 0;
 }

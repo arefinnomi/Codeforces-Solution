@@ -25,30 +25,30 @@ using namespace std;
 
 int main()
 {
-    int n;
-    cin>>n;
+	int n;
+	cin>>n;
 
 
-    int ary[n];
+	int ary[n];
 
 
 
-    for(int i = 0; i < n; i++)
-    {
-        scanf("%d", &ary[i] );
+	for(int i = 0; i < n; i++)
+	{
+		scanf("%d", &ary[i] );
 
-        if(i && i % 2) ary[i] = (ary[i]+ary[0]) % n;
-        else if(i) ary[i] = (ary[i] + n - ary[0]) % n;
-    }
+		if(i && i % 2) ary[i] = (ary[i]+ary[0]) % n;
+		else if(i) ary[i] = (ary[i] + n - ary[0]) % n;
+	}
 
-    ary[0] = 0;
+	ary[0] = 0;
 
-    for(int i = 0; i < n; i++) if( ary[i] != i)
-        {
-            cout<<"No"<<endl;
-            return 0;
-        }
+	for(int i = 0; i < n; i++) if( ary[i] != i)
+		{
+			cout<<"No"<<endl;
+			return 0;
+		}
 	cout<<"Yes"<<endl;
 //	main();
-    return 0;
+	return 0;
 }

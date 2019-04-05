@@ -24,20 +24,20 @@ using namespace std;
 
 int  fun( int num1, int num2)
 {
-    int cont = 0;
-    while(num1||num2)
-    {
-        if((num1&1) != (num2&1) )
-        {
-            cont++;
-//            cout<<(int )(num1&1 )<<" "<<(int) (num2&1 )<<endl;
-        }
-        num1 = num1>>1;
-        num2 = num2>>1;
+	int cont = 0;
+	while(num1||num2)
+	{
+		if((num1&1) != (num2&1) )
+		{
+			cont++;
+//			cout<<(int )(num1&1 )<<" "<<(int) (num2&1 )<<endl;
+		}
+		num1 = num1>>1;
+		num2 = num2>>1;
 
-    }
-//    cout<<"---------------------"<<cont<<endl;
-    return cont;
+	}
+//	cout<<"---------------------"<<cont<<endl;
+	return cont;
 }
 
 
@@ -45,25 +45,25 @@ int main()
 {
 
 
-    int n, m, k;
-    scanf("%d %d %d", &n, &m, &k);
-    int ind = 0;
+	int n, m, k;
+	scanf("%d %d %d", &n, &m, &k);
+	int ind = 0;
 
-    int ary[1000+5];
-    while(ind < m+1)
-    {
-        scanf("%d", &ary[ind]);
-        ind++;
-    }
+	int ary[1000+5];
+	while(ind < m+1)
+	{
+		scanf("%d", &ary[ind]);
+		ind++;
+	}
 
-    int cont = 0;
+	int cont = 0;
 
-    for(int i = 0 ; i < m; i++)
-    {
-        if( fun(ary[m], ary[i] ) <= k) cont++;
-    }
+	for(int i = 0 ; i < m; i++)
+	{
+		if( fun(ary[m], ary[i] ) <= k) cont++;
+	}
 
-    printf("%d\n", cont);
+	printf("%d\n", cont);
 
-    return 0;
+	return 0;
 }

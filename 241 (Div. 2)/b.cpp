@@ -35,15 +35,15 @@ int main()
 
 
 
-    for(int i = 1; i < n; i++) ary[0][i] += ary[0][i-1];
+	for(int i = 1; i < n; i++) ary[0][i] += ary[0][i-1];
 
 
-    for(int i = 1; i < m; i++) ary[i][0] += ary[i-1][0];
+	for(int i = 1; i < m; i++) ary[i][0] += ary[i-1][0];
 
 
-    for(int i = 1; i < m; i++) for(int j = 1; j < n; j++)    ary[i][j] += max(ary[i][j-1], ary[i-1][j]);
+	for(int i = 1; i < m; i++) for(int j = 1; j < n; j++)	ary[i][j] += max(ary[i][j-1], ary[i-1][j]);
 
 
-    for(int i = 0; i < m; i++) printf("%d ", ary[i][n-1]);
-    return 0;
+	for(int i = 0; i < m; i++) printf("%d ", ary[i][n-1]);
+	return 0;
 }

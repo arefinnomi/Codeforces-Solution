@@ -32,42 +32,42 @@ long long my_pow( int exp)
 
 int main()
 {
-    string str;
-    cin>>str;
+	string str;
+	cin>>str;
 
-    string re = "";
+	string re = "";
 
 
-    for(int i = 0; i < str.size() ; i++)
-    {
-        switch (str[i])
-        {
-        case '>' :
-            re += "1000";
-            break;
-        case '<' :
-            re += "1001";
-            break;
-        case '+' :
-            re += "1010";
-            break;
-        case '-' :
-            re += "1011";
-            break;
-        case '.' :
-            re += "1100";
-            break;
-        case ',' :
-            re += "1101";
-            break;
-        case '[' :
-            re += "1110";
-            break;
-        case ']' :
-            re += "1111";
-            break;
-        }
-    }
+	for(int i = 0; i < str.size() ; i++)
+	{
+		switch (str[i])
+		{
+		case '>' :
+			re += "1000";
+			break;
+		case '<' :
+			re += "1001";
+			break;
+		case '+' :
+			re += "1010";
+			break;
+		case '-' :
+			re += "1011";
+			break;
+		case '.' :
+			re += "1100";
+			break;
+		case ',' :
+			re += "1101";
+			break;
+		case '[' :
+			re += "1110";
+			break;
+		case ']' :
+			re += "1111";
+			break;
+		}
+	}
 
 	reverse(re.begin(), re.end());
 
@@ -82,5 +82,5 @@ int main()
 
 
 //	main();
-    return 0;
+	return 0;
 }

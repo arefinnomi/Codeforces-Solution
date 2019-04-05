@@ -47,5 +47,5 @@ int main()
 	if(sub>0)cout<<sub<<endl;
 	else cout<<-sub<<endl;
 
-    return 0;
+	return 0;
 }

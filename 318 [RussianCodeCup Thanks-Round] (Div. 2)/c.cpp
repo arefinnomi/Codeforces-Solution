@@ -31,34 +31,34 @@ using namespace std;
 
 int main()
 {
-    int n;
-    cin>>n;
+	int n;
+	cin>>n;
 
-    int ary[n];
-
-
-
-    for(int i = 0; i < n; i++)
-    {
-        scanf("%d", ary+i);
-
-        while( ary[i] % 2 == 0) ary[i] /= 2;
-        while( ary[i] % 3 == 0) ary[i] /= 3;
-
-    }
+	int ary[n];
 
 
-    for(int i = 0; i <  n -1; i++)
-    {
 
-        if( ary[i+1] != ary[i] )
-        {
-            cout<<"No\n";
-            return 0;
-        }
-    }
+	for(int i = 0; i < n; i++)
+	{
+		scanf("%d", ary+i);
 
-    cout<<"Yes\n";
+		while( ary[i] % 2 == 0) ary[i] /= 2;
+		while( ary[i] % 3 == 0) ary[i] /= 3;
 
-    return 0;
+	}
+
+
+	for(int i = 0; i <  n -1; i++)
+	{
+
+		if( ary[i+1] != ary[i] )
+		{
+			cout<<"No\n";
+			return 0;
+		}
+	}
+
+	cout<<"Yes\n";
+
+	return 0;
 }

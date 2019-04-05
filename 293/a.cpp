@@ -26,40 +26,40 @@ using namespace std;
 
 int main()
 {
-    //while(1)
-    {
-        char str1[120], str2[120];
+	//while(1)
+	{
+		char str1[120], str2[120];
 
-        gets(str1);
-        gets(str2);
+		gets(str1);
+		gets(str2);
 
-        int len = strlen(str1);
+		int len = strlen(str1);
 
-        char temp[120];
+		char temp[120];
 
-        for( int i = len - 1; i >= 0; i--)
-        {
-            if( str1[i] == 'z')
-            {
-                str1[i] =  'a';
-            }
-            else
-            {
-                str1[i]++;
-                break;
-            }
-        }
+		for( int i = len - 1; i >= 0; i--)
+		{
+			if( str1[i] == 'z')
+			{
+				str1[i] =  'a';
+			}
+			else
+			{
+				str1[i]++;
+				break;
+			}
+		}
 
 
 
-        if( strcmp(str2, str1) > 0)
-        {
-            printf("%s", str1);
-        }
-        else printf("No such string");
+		if( strcmp(str2, str1) > 0)
+		{
+			printf("%s", str1);
+		}
+		else printf("No such string");
 
-        nwl;
-    }
+		nwl;
+	}
 
-    return 0;
+	return 0;
 }

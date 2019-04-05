@@ -22,25 +22,25 @@ using namespace std;
 
 int main()
 {
-    int test;
+	int test;
 
-    scanf("%d ", &test);
+	scanf("%d ", &test);
 
-    while(test--)
-    {
-        char str[200];
+	while(test--)
+	{
+		char str[200];
 
-        gets(str);
+		gets(str);
 
 
-        int len = strlen(str);
+		int len = strlen(str);
 
-        if( len <= 10) puts(str);
+		if( len <= 10) puts(str);
 
-        else
-        {
-            printf("%c%d%c\n", str[0], len - 2, str[len-1]);
-        }
-    }
-    return 0;
+		else
+		{
+			printf("%c%d%c\n", str[0], len - 2, str[len-1]);
+		}
+	}
+	return 0;
 }

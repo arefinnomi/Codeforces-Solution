@@ -63,12 +63,12 @@ int main()
 		}
 	}
 
-    sort(s.begin(), s.end());
-    sort(b.begin(), b.end());
+	sort(s.begin(), s.end());
+	sort(b.begin(), b.end());
 
-    for(int i = s.size() < d ? s.size()-1 : d-1 ; i >= 0; i--) cout<<"S "<<s[i].first<<" "<<s[i].second<<endl;
-    for(int i = b.size() - 1; i >= 0 && b.size() - i <= d; i--) cout<<"B "<<b[i].first<<" "<<b[i].second<<endl;
+	for(int i = s.size() < d ? s.size()-1 : d-1 ; i >= 0; i--) cout<<"S "<<s[i].first<<" "<<s[i].second<<endl;
+	for(int i = b.size() - 1; i >= 0 && b.size() - i <= d; i--) cout<<"B "<<b[i].first<<" "<<b[i].second<<endl;
 
 
-    return 0;
+	return 0;
 }

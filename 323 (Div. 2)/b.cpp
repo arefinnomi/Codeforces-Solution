@@ -33,55 +33,55 @@ bool crack[1000];
 
 int main()
 {
-    int n, temp;
+	int n, temp;
 
-    cin>>n;
+	cin>>n;
 
-    int ary[n];
+	int ary[n];
 
-    for(int i = 0; i < n; i++) cin >>ary[i];
+	for(int i = 0; i < n; i++) cin >>ary[i];
 
-    int info = 0, cont = 0;
+	int info = 0, cont = 0;
 
-    bool flag = 1;
+	bool flag = 1;
 
-    while(1)
-    {
+	while(1)
+	{
 
-        for(int i = 0; i < n; i++)
-        {
-            if( ary[i] <= info && !crack[i])
-            {
-                crack[i] = 1;
-                info++;
-            }
-        }
-
-
-        flag = 0;
-        for(int i = 0; i < n ; i++) if( !crack[i] ) flag = 1;
-        if( !flag ) break;
-        cont++;
-
-        for(int i = n-1; i > -1; i--)
-        {
-            if( ary[i] <= info && !crack[i])
-            {
-                crack[i] = 1;
-                info++;
-            }
-        }
-
-        flag = 0;
-        for(int i = 0; i < n ; i++) if( !crack[i] ) flag = 1;
-        if( !flag ) break;
-        cont++;
-
-    }
-    cout<<cont<<endl;
+		for(int i = 0; i < n; i++)
+		{
+			if( ary[i] <= info && !crack[i])
+			{
+				crack[i] = 1;
+				info++;
+			}
+		}
 
 
+		flag = 0;
+		for(int i = 0; i < n ; i++) if( !crack[i] ) flag = 1;
+		if( !flag ) break;
+		cont++;
+
+		for(int i = n-1; i > -1; i--)
+		{
+			if( ary[i] <= info && !crack[i])
+			{
+				crack[i] = 1;
+				info++;
+			}
+		}
+
+		flag = 0;
+		for(int i = 0; i < n ; i++) if( !crack[i] ) flag = 1;
+		if( !flag ) break;
+		cont++;
+
+	}
+	cout<<cont<<endl;
 
 
-    return 0;
+
+
+	return 0;
 }

@@ -39,11 +39,11 @@ int main()
 	int ary[n-1];
 	for(int i = 0; i < n -1; i++) cin>>ary[i];
 
-    sort(ary, ary + n - 1);
+	sort(ary, ary + n - 1);
 
-    int cont = 0, i;
+	int cont = 0, i;
 
-    while( c + cont <= ary[n-1-1])
+	while( c + cont <= ary[n-1-1])
 	{
 		ary[n-1-1]--;
 		cont++;
@@ -58,5 +58,5 @@ int main()
 
 	cout<< cont<<endl;
 
-    return 0;
+	return 0;
 }

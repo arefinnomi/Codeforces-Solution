@@ -25,26 +25,26 @@ using namespace std;
 
 int main()
 {
-    long  long a , b;
+	long  long a , b;
 
-    long long cont = 0;
+	long long cont = 0;
 
-    cin >> a>>b;
+	cin >> a>>b;
 
-//    cout << a <<" "<<b << " " << cont<< endl;
+//	cout << a <<" "<<b << " " << cont<< endl;
 
-    while( true )
-    {
+	while( true )
+	{
 		if(a == b || a==0 || b==0  )break;
-        if( a < b ) swap(a,b);
+		if( a < b ) swap(a,b);
 
-        cont += a / b;
-        a = a % b;
+		cont += a / b;
+		a = a % b;
 
-//        cout << a <<" "<<b << " " << cont<< endl;
-    }
-    cout<<cont;
+//		cout << a <<" "<<b << " " << cont<< endl;
+	}
+	cout<<cont;
 
 
-    return 0;
+	return 0;
 }

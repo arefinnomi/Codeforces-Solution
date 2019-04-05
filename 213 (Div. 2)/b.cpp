@@ -25,33 +25,33 @@ using namespace std;
 
 int main()
 {
-    int n;
+	int n;
 
-    cin>>n;
-
-
-    int a[n];
-
-    for(int i = 0; i < n; i++) scanf("%d", &a[i]);
-
-    int maxima = 0;
-    int temp;
-
-    if( n == 1) temp = 1;
-    else temp = 2;
-
-    maxima = max(temp, maxima);
-
-    for(int i = 2; i < n; i++)
-    {
-        if( a[i] == a[i-1]+a[i-2]) temp++;
-        else temp = 2;
-        maxima = max(temp, maxima);
-    }
+	cin>>n;
 
 
-    cout << maxima<<endl;
+	int a[n];
+
+	for(int i = 0; i < n; i++) scanf("%d", &a[i]);
+
+	int maxima = 0;
+	int temp;
+
+	if( n == 1) temp = 1;
+	else temp = 2;
+
+	maxima = max(temp, maxima);
+
+	for(int i = 2; i < n; i++)
+	{
+		if( a[i] == a[i-1]+a[i-2]) temp++;
+		else temp = 2;
+		maxima = max(temp, maxima);
+	}
+
+
+	cout << maxima<<endl;
 
 //	main();
-    return 0;
+	return 0;
 }

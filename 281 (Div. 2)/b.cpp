@@ -40,35 +40,35 @@ string convert(long long num)
 
 int main()
 {
-    int n;
-    cin >> n;
-    long long first_point=0, second_point = 0, temp;
-    vector <int> first , second;
-    bool last;
+	int n;
+	cin >> n;
+	long long first_point=0, second_point = 0, temp;
+	vector <int> first , second;
+	bool last;
 
-    for(int i = 0; i < n; i++)
-    {
-        cin>>temp;
+	for(int i = 0; i < n; i++)
+	{
+		cin>>temp;
 
-        if( temp > 0)
-        {
-            last = 0;
-            first_point += temp;
+		if( temp > 0)
+		{
+			last = 0;
+			first_point += temp;
 			first.push_back((int)temp);
-        }
-        else
-        {
-            last = 1;
-            temp = - temp;
-            second_point += temp;
-            second.push_back((int)temp);
-        }
-    }
+		}
+		else
+		{
+			last = 1;
+			temp = - temp;
+			second_point += temp;
+			second.push_back((int)temp);
+		}
+	}
 
-    if( first_point > second_point) cout<<"first";
-    else if(first_point < second_point) cout<<"second";
-    else
-    {
+	if( first_point > second_point) cout<<"first";
+	else if(first_point < second_point) cout<<"second";
+	else
+	{
 		int flag = 0;
 
 		for( int i = 0; (i < first.size() || i < second.size() ) && flag == 0; i++)
@@ -80,13 +80,13 @@ int main()
 
 		if( flag == 1) cout<<"first";
 		else if( flag == 2) cout<<"second";
-    	else
+		else
 		{
 			if(last) cout<<"second";
 			else cout<<"first";
 		}
-    }
-    nwl;
-//    main();
-    return 0;
+	}
+	nwl;
+//	main();
+	return 0;
 }

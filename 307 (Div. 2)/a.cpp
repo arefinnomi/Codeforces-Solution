@@ -28,23 +28,23 @@ int main()
 	int temp[2001] = {0};
 	int Rank[2001] = {0};
 
-    int n;
+	int n;
 
-    cin>>n;
+	cin>>n;
 
-    int a_main[n];
-
-
-    for(int i = 0; i < n; i++)
-    {
-        cin>>a_main[i];
-        temp[a_main[i]]++;
-    }
-
-    int pls = 1;
+	int a_main[n];
 
 
-    for(int i = 2000; i >= 0; i--)
+	for(int i = 0; i < n; i++)
+	{
+		cin>>a_main[i];
+		temp[a_main[i]]++;
+	}
+
+	int pls = 1;
+
+
+	for(int i = 2000; i >= 0; i--)
 	{
 		if( temp[i] ) Rank[i] = pls;
 
@@ -56,5 +56,5 @@ int main()
 
 
 //	main();
-    return 0;
+	return 0;
 }

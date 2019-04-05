@@ -27,38 +27,38 @@ using namespace std;
 
 int main()
 {
-    int n, m;
-    cin>>n>>m;
-    int a[n];
-    int b[m];
-    for(int i = 0; i < n; i++) cin>>a[i];
-    for(int i = 0; i < m; i++) cin>>b[i];
-    int cont = n;
+	int n, m;
+	cin>>n>>m;
+	int a[n];
+	int b[m];
+	for(int i = 0; i < n; i++) cin>>a[i];
+	for(int i = 0; i < m; i++) cin>>b[i];
+	int cont = n;
 
-    int j = 0;
+	int j = 0;
 
 
-    for(int i = 0; i < n && j < m; i++)
-    {
+	for(int i = 0; i < n && j < m; i++)
+	{
 
-        while(a[i] > b[j]) j++;
+		while(a[i] > b[j]) j++;
 
-        if( j >= m) break;
+		if( j >= m) break;
 
-//        cout<<j<<" "<<i<<" "<<cont<<endl;
-        if(a[i] == b[j])
-        {
-            cont--;
+//		cout<<j<<" "<<i<<" "<<cont<<endl;
+		if(a[i] == b[j])
+		{
+			cont--;
 			j++;
-        }
-        else if(a[i] < b[j])
-        {
-            cont--;
-            j++;
-        }
-    }
-    cout<<cont;
-    nwl;
+		}
+		else if(a[i] < b[j])
+		{
+			cont--;
+			j++;
+		}
+	}
+	cout<<cont;
+	nwl;
 //	main();
-    return 0;
+	return 0;
 }

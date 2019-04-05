@@ -30,33 +30,33 @@ using namespace std;
 
 LLI my(LLI n, LLI i)
 {
-    if( i == 0) return 1;
-    return n * my(n, i-1);
+	if( i == 0) return 1;
+	return n * my(n, i-1);
 }
 
 
 int main()
 {
-    LLI i, n;
+	LLI i, n;
 
-    cin>>n;
+	cin>>n;
 
-    int cont = 0;
-
-
-    for( i = 40; i >= 0 && n; i--)
-    {
-        if( my(2, i ) <= n)
-        {
-            cont++;
-            n -= my(2, i);
-        }
-    }
+	int cont = 0;
 
 
+	for( i = 40; i >= 0 && n; i--)
+	{
+		if( my(2, i ) <= n)
+		{
+			cont++;
+			n -= my(2, i);
+		}
+	}
 
 
-    cout<<cont + n<<endl;
 
-    return 0;
+
+	cout<<cont + n<<endl;
+
+	return 0;
 }

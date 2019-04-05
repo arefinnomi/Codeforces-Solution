@@ -24,24 +24,24 @@ using namespace std;
 
 int main()
 {
-    int n, t;
-    cin>>n>>t;
+	int n, t;
+	cin>>n>>t;
 
-    int ary[n];
+	int ary[n];
 
-    int maxim = 0, sum = 0, k = 0;
+	int maxim = 0, sum = 0, k = 0;
 
-    for(int i = 0; i < n; i++)
-    {
-        scanf("%d", &ary[i]);
-        sum += ary[i];
-        if(sum <= t) maxim = max(maxim, i - k + 1);
+	for(int i = 0; i < n; i++)
+	{
+		scanf("%d", &ary[i]);
+		sum += ary[i];
+		if(sum <= t) maxim = max(maxim, i - k + 1);
 
-        while( sum > t )		sum -= ary[k++];
-//        cout<<maxim<<" "<<sum<<endl;
+		while( sum > t )		sum -= ary[k++];
+//		cout<<maxim<<" "<<sum<<endl;
 
-    }
+	}
 	cout<<maxim<<"\n";
-//    main();
-    return 0;
+//	main();
+	return 0;
 }

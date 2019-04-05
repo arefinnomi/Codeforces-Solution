@@ -26,21 +26,21 @@ using namespace std;
 int main()
 {
 
-    int n, m;
+	int n, m;
 
-    cin>>n>>m;
+	cin>>n>>m;
 
-    vector < int > store[n+1];
+	vector < int > store[n+1];
 
-    int temp1, temp2;
+	int temp1, temp2;
 
-    for(int i = 0; i < m; i++)
-    {
-        scanf("%d %d", &temp1, &temp2);
+	for(int i = 0; i < m; i++)
+	{
+		scanf("%d %d", &temp1, &temp2);
 
-        store[temp1].push_back(temp2);
-        store[temp2].push_back(temp1);
-    }
+		store[temp1].push_back(temp2);
+		store[temp2].push_back(temp1);
+	}
 
 	int cont = 0;
 	bool flag = 1;
@@ -49,11 +49,11 @@ int main()
 
 	while(flag)
 	{
-        flag = 0;
+		flag = 0;
 
-        for(int i = 0; i < n+1; i++) used[i] = 1;
+		for(int i = 0; i < n+1; i++) used[i] = 1;
 
-        for(int i = 1; i < n+1; i++)
+		for(int i = 1; i < n+1; i++)
 		{
 			if(store[i].size() == 1 && used[i] )
 			{
@@ -61,9 +61,9 @@ int main()
 				used[i] = 0;
 				used[store[i][0]] = 0;
 
-                store[store[i][0]].erase( find( store[store[i][0]].begin(), store[store[i][0]].end(), i));
+				store[store[i][0]].erase( find( store[store[i][0]].begin(), store[store[i][0]].end(), i));
 
-                store[i].erase(store[i].begin());
+				store[i].erase(store[i].begin());
 			}
 		}
 
@@ -74,5 +74,5 @@ int main()
 	cout<<cont<<endl;
 
 
-    return 0;
+	return 0;
 }

@@ -48,7 +48,7 @@ int main()
 		temp = 0;
 
 		for(int j = 1; j < n; j++) if( ary[temp] < ary[j] ) temp = j;
-        no_win[temp]++;
+		no_win[temp]++;
 	}
 
 
@@ -61,5 +61,5 @@ int main()
 
 
 	cout<<win+1<<endl;
-	    return 0;
+		return 0;
 }

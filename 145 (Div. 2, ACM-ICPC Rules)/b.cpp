@@ -24,14 +24,14 @@ using namespace std;
 
 struct my
 {
-    int _1;
-    int _2;
+	int _1;
+	int _2;
 
-    my()
-    {
-    	_1 = 0;
-    	_2 = 0;
-    }
+	my()
+	{
+		_1 = 0;
+		_2 = 0;
+	}
 
 	my(int a, int b)
 	{
@@ -39,20 +39,20 @@ struct my
 		_2 = b;
 	}
 
-    bool operator > (const my &B) const
-    {
-        if( _1 > B._1) return 1;
-        else if (_1 < B._1 )return 0;
-        else if( _2 > B._2 ) return 1;
-        else return 0;
-    }
+	bool operator > (const my &B) const
+	{
+		if( _1 > B._1) return 1;
+		else if (_1 < B._1 )return 0;
+		else if( _2 > B._2 ) return 1;
+		else return 0;
+	}
 };
 
 void my_sort(my *p, my *q)
 {
 	int limit = q - p;
 
-    for(int i = 0; i < limit; i++)
+	for(int i = 0; i < limit; i++)
 	{
 		for(int j = i + 1; j < limit; j++)
 		{
@@ -94,5 +94,5 @@ int main()
 
 	for(int i = 0; i < k; i++) cout<<ans[i]<<" ";
 
-    return 0;
+	return 0;
 }

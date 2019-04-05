@@ -86,11 +86,11 @@ int main()
 
 	for(int i = 0; i < n; i++)
 	{
-        data.push_back(triple( i, "", 0, 0, 0));
+		data.push_back(triple( i, "", 0, 0, 0));
 
-        cin>>s>>data[i].name;
+		cin>>s>>data[i].name;
 
-        for(int j = 0; j < s; j++)
+		for(int j = 0; j < s; j++)
 		{
 			cin>>str;
 
@@ -135,5 +135,5 @@ int main()
 
 
 //	main();
-    return 0;
+	return 0;
 }

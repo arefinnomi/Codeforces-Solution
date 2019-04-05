@@ -24,37 +24,37 @@
 
 using namespace std;
 
-#define endl       '\n'
-#define spc        printf(" ")
-#define nln        printf("\n")                     ///printnewline
-#define fast_IO    ios_base::sync_with_stdio(false);
-#define Max(a,b,c) max(a,max(b,c))                  ///3 ta theke max
-#define Min(a,b,c) min(a,min(b,c))                  ///3 ta theke min
-#define sqr(x)     (x)*(x)
+#define endl	   '\n'
+#define spc		printf(" ")
+#define nln		printf("\n")					 ///printnewline
+#define fast_IO	ios_base::sync_with_stdio(false);
+#define Max(a,b,c) max(a,max(b,c))				  ///3 ta theke max
+#define Min(a,b,c) min(a,min(b,c))				  ///3 ta theke min
+#define sqr(x)	 (x)*(x)
 
-#define z(x)       fabs(x)<EPS
+#define z(x)	   fabs(x)<EPS
 #define iqu(x,y)   z(fabs(x-y))
 
 #define rep(i,a,b)  for(i=a;i<=b;i++)
 #define rep0(i,n)   for(i=0;i<n;i++)
-#define rep1(i,n)   for(i=1;i<=n;i++)               ///looping
+#define rep1(i,n)   for(i=1;i<=n;i++)			   ///looping
 #define rev(i,a,b)  for(i=a;i>=b;i--)
 #define rev0(i,n)   for(i=n-1;i>=0;i--)
 #define rev1(i,n)   for(i=n;i>=1;i--)
 #define forstl(i,v) for(i=0;i<v.size();i++)
 #define forit(it,v) for(__typeof(v.begin()) it=v.begin();it!=v.end();it++)
-#define all(p)      p.begin(),p.end()
+#define all(p)	  p.begin(),p.end()
 
-#define SET(p)     memset(p,-1,sizeof(p))
-#define CLR(p)     memset(p,0,sizeof(p))            ///memset
+#define SET(p)	 memset(p,-1,sizeof(p))
+#define CLR(p)	 memset(p,0,sizeof(p))			///memset
 #define MEM(p,v)   memset(p,v,sizeof(p))
 
-#define sz(c)      (int)c.size()
-#define pb(x)      push_back(x)                     ///STL defines
-#define mp(x,y)    make_pair(x,y)
-#define xx         first
-#define yy         second
-#define _itr(v)    __typeof(v.begin())
+#define sz(c)	  (int)c.size()
+#define pb(x)	  push_back(x)					 ///STL defines
+#define mp(x,y)	make_pair(x,y)
+#define xx		 first
+#define yy		 second
+#define _itr(v)	__typeof(v.begin())
 
 typedef unsigned int UI;
 typedef long long int i64;
@@ -62,15 +62,15 @@ typedef unsigned long long int Ui64;
 typedef long double LLF;
 typedef double LF;
 
-typedef vector<int>     vi;
-typedef vector<i64>     vll;
+typedef vector<int>	 vi;
+typedef vector<i64>	 vll;
 typedef vector<string>  vs;
 typedef pair<int, int>  pii;
 typedef pair<i64, i64>  pll;
 
-#define check(n, pos)  (bool)(n & (1LL<<(pos)))      ///CHECK
-#define biton(n, pos)  (n | (1LL<<(pos)))            ///ON     }-bit opr.
-#define bitoff(n, pos) (n & ~(1LL<<(pos)))           ///OFF
+#define check(n, pos)  (bool)(n & (1LL<<(pos)))	  ///CHECK
+#define biton(n, pos)  (n | (1LL<<(pos)))			///ON	 }-bit opr.
+#define bitoff(n, pos) (n & ~(1LL<<(pos)))		   ///OFF
 
 // reading and writing case
 #define readcase  int cas,kase=0;CI(cas);while((cas--)&&(++kase))
@@ -81,10 +81,10 @@ bool deb_mode = 0;
 #define debug(a...) if(deb_mode){cout<<"Line= "<<__LINE__<<" -> ";Dbug,a,#a;Dbug.printall();cout<<endl;}
 class debugger
 {
-    vector<string> vars;
+	vector<string> vars;
 public:
-    template<typename T> debugger& operator , ( const T v ) { stringstream ss; ss << v, vars.push_back( ss.str() ); return *this; }
-    void printall() { int j = 0, l = vars.size(); for( int i = 0; i < ( l - 1 ); i++ ) { if( i )cout << ", "; for( j; j < vars[l - 1].size(); j++ ) { if( vars[l - 1][j] == ',' ) {j++; break;} cout << vars[l - 1][j]; } cout << " = " << vars[i]; } vars.clear(); }
+	template<typename T> debugger& operator , ( const T v ) { stringstream ss; ss << v, vars.push_back( ss.str() ); return *this; }
+	void printall() { int j = 0, l = vars.size(); for( int i = 0; i < ( l - 1 ); i++ ) { if( i )cout << ", "; for( j; j < vars[l - 1].size(); j++ ) { if( vars[l - 1][j] == ',' ) {j++; break;} cout << vars[l - 1][j]; } cout << " = " << vars[i]; } vars.clear(); }
 } Dbug;
 
 ///STL printing output stream overloading
@@ -112,12 +112,12 @@ i64 toLong( string s ) { i64 r = 0; istringstream sin( s ); sin >> r; return r; 
 
 int dr8[8] = { +1, -1, +0, +0, +1, -1, -1, +1};   ///8 direction move
 int dc8[8] = { +0, +0, -1, +1, +1, +1, -1, -1};
-int dr4[4] = { +0, +0, +1, -1};                   ///4 direction move
-int dc4[4] = { -1, +1, +0, +0};                   ///or adjacent dir.
+int dr4[4] = { +0, +0, +1, -1};				   ///4 direction move
+int dc4[4] = { -1, +1, +0, +0};				   ///or adjacent dir.
 int kn8r[8] = { +1, +2, +2, +1, -1, -2, -2, -1};  ///knight moves
 int kn8c[8] = { +2, +1, -1, -2, -2, -1, +1, +2};
 
-const double EPS = 1e-9;                         ///constants
+const double EPS = 1e-9;						 ///constants
 const int INF = ( 1 << 30 ) - 1;
 const i64 LINF = ( 1ll << 62 ) - 1;
 const int mod = ( int )1e9 + 7;
@@ -131,10 +131,10 @@ const int MAX = ( int )1e5;
 int main()
 {
 #ifndef ONLINE_JUDGE
-//    freopen("i.txt", "r", stdin);         /// file
-//    freopen("o.txt", "w", stdout);
+//	freopen("i.txt", "r", stdin);		 /// file
+//	freopen("o.txt", "w", stdout);
 
-    deb_mode = 1;
+	deb_mode = 1;
 #endif
 	int n;
 	cin>>n;
@@ -157,5 +157,5 @@ int main()
 	if(pos_max>pos_min) cout<<pos_max-0 + (n-1-pos_min) - 1<<endl;
 	else cout<<pos_max-0 + (n-1-pos_min)<<endl;
 
-    return 0;
+	return 0;
 }

@@ -27,29 +27,29 @@ using namespace std;
 int main()
 {
 
-    int a, b, c, d;
+	int a, b, c, d;
 
 
-    cin>>a>>b>>c>>d;
+	cin>>a>>b>>c>>d;
 
 
-    double re = 0;
+	double re = 0;
 
-    double p = (double) a / b;
-    double q = (double) c / d;
+	double p = (double) a / b;
+	double q = (double) c / d;
 
-    double pq = (double) ( 1 - p ) * ( 1 - q);
+	double pq = (double) ( 1 - p ) * ( 1 - q);
 
 
-    for(int i = 0; i < 1000000; i++)
-    {
-        re += pow(pq, i);
-    }
+	for(int i = 0; i < 1000000; i++)
+	{
+		re += pow(pq, i);
+	}
 
-    re *= p;
+	re *= p;
 
-    printf("%.11lf\n", re);
+	printf("%.11lf\n", re);
 
 //	main();
-    return 0;
+	return 0;
 }

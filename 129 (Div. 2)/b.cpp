@@ -49,5 +49,5 @@ int main()
 	cout<< cont<<endl;
 
 
-    return 0;
+	return 0;
 }

@@ -22,35 +22,35 @@ using namespace std;
 
 int main()
 {
-    int n, t;
+	int n, t;
 
 
-    scanf("%d %d", &n, &t);
+	scanf("%d %d", &n, &t);
 
-    getchar();
+	getchar();
 
-    char str[n+1];
-
-
-    gets(str);
+	char str[n+1];
 
 
-    while( t--)
-    {
-        for(int i = 0; i < n; i++)
-        {
-            if( str[i] == 'B' && str[i+1] == 'G')
-            {
-                swap(str[i], str[i+1]);
-                i++;
-            }
-        }
-    }
+	gets(str);
+
+
+	while( t--)
+	{
+		for(int i = 0; i < n; i++)
+		{
+			if( str[i] == 'B' && str[i+1] == 'G')
+			{
+				swap(str[i], str[i+1]);
+				i++;
+			}
+		}
+	}
 
 
 
-    puts(str);
+	puts(str);
 
 
-    return 0;
+	return 0;
 }

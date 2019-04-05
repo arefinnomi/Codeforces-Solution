@@ -25,40 +25,40 @@ using namespace std;
 
 int main()
 {
-    int n, m;
+	int n, m;
 
-    cin>>n>>m;
+	cin>>n>>m;
 
-    char str[n][m+5];
+	char str[n][m+5];
 
-    for(int i = 0; i < n; i++) cin>>str[i];
-
-
-
-    int cont = 0;
+	for(int i = 0; i < n; i++) cin>>str[i];
 
 
-    for(int i = 0;  i < n; i++)
-    {
-        for(int j = 0; j < m; j++)
-        {
-            if( str[i][j] == 'W')
-            {
-                bool flag = 0;
 
-                if( j != 0 ) if( str[i][j-1] == 'P') flag = 1;
-                if( j != m-1 ) if( str[i][j+1] == 'P') flag = 1;
-
-                if( i != 0 ) if( str[i-1][j] == 'P') flag = 1;
-                if( i != n-1 ) if( str[i+1][j] == 'P') flag = 1;
-
-                if(flag) cont++;
-            }
-        }
-    }
+	int cont = 0;
 
 
-    cout<<cont<<endl;
-//    main();
-    return 0;
+	for(int i = 0;  i < n; i++)
+	{
+		for(int j = 0; j < m; j++)
+		{
+			if( str[i][j] == 'W')
+			{
+				bool flag = 0;
+
+				if( j != 0 ) if( str[i][j-1] == 'P') flag = 1;
+				if( j != m-1 ) if( str[i][j+1] == 'P') flag = 1;
+
+				if( i != 0 ) if( str[i-1][j] == 'P') flag = 1;
+				if( i != n-1 ) if( str[i+1][j] == 'P') flag = 1;
+
+				if(flag) cont++;
+			}
+		}
+	}
+
+
+	cout<<cont<<endl;
+//	main();
+	return 0;
 }

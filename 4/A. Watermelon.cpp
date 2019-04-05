@@ -22,10 +22,10 @@ using namespace std;
 
 int main()
 {
-    int num;
-    scanf("%d", &num);
+	int num;
+	scanf("%d", &num);
 
-    if( num % 2 == 0 && num != 2 ) puts("YES");
-    else puts("NO");
-    return 0;
+	if( num % 2 == 0 && num != 2 ) puts("YES");
+	else puts("NO");
+	return 0;
 }

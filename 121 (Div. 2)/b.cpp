@@ -32,25 +32,25 @@ using namespace std;
 int main()
 {
 
-    int n;
+	int n;
 
-    cin >>n;
+	cin >>n;
 
-    int ary[1000+10];
+	int ary[1000+10];
 
-    for(int i = 0; i < n; i++) cin >>ary[i];
+	for(int i = 0; i < n; i++) cin >>ary[i];
 
-    int cont = min( ary[0], ary[n-1]);
+	int cont = min( ary[0], ary[n-1]);
 
-    for(int i = 1; i < n - 2; i++)
-    {
-        if( cont == ary[i] && ary[i] > ary[i+1] ) cont = ary[i];
-        if( cont == ary[i+1] && ary[i+1] > ary[i] ) cont = ary[i+1];
-        if( cont > ary[i] && ary[i] == ary[i+1] ) cont = ary[i];
-        if( cont > ary[i] && ary[i] > ary[i+1] ) cont = ary[i];
-        if( cont > ary[i+1] && ary[i+1] > ary[i] ) cont = ary[i+1];
+	for(int i = 1; i < n - 2; i++)
+	{
+		if( cont == ary[i] && ary[i] > ary[i+1] ) cont = ary[i];
+		if( cont == ary[i+1] && ary[i+1] > ary[i] ) cont = ary[i+1];
+		if( cont > ary[i] && ary[i] == ary[i+1] ) cont = ary[i];
+		if( cont > ary[i] && ary[i] > ary[i+1] ) cont = ary[i];
+		if( cont > ary[i+1] && ary[i+1] > ary[i] ) cont = ary[i+1];
 
-    }
+	}
 	cout<<cont<<endl;
-    return 0;
+	return 0;
 }

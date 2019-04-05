@@ -32,25 +32,25 @@ using namespace std;
 
 int main()
 {
-    LLI n;
-    cin>>n;
-    LLI x ;
+	LLI n;
+	cin>>n;
+	LLI x ;
 
-    LLI limit = sqrt(n);
+	LLI limit = sqrt(n);
 
-    LLI temp , sum = 0;
-    for( x = max( (LLI)(-90 + sqrt(90*90+4*n) ) / 2, (LLI) 1) ; x <= limit; x++)
-    {
-        sum=0;
-        temp = x;
-        while(temp)
-        {
-            sum += temp % 10;
-            temp /= 10;
-        }
-        if( sum * x + x * x == n) { cout<<x<<endl; return 0;
-        }}
-        cout<<-1<<endl;
+	LLI temp , sum = 0;
+	for( x = max( (LLI)(-90 + sqrt(90*90+4*n) ) / 2, (LLI) 1) ; x <= limit; x++)
+	{
+		sum=0;
+		temp = x;
+		while(temp)
+		{
+			sum += temp % 10;
+			temp /= 10;
+		}
+		if( sum * x + x * x == n) { cout<<x<<endl; return 0;
+		}}
+		cout<<-1<<endl;
 
-        return 0;
-    }
+		return 0;
+	}

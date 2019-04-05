@@ -25,54 +25,54 @@ using namespace std;
 
 int main()
 {
-//    while(1)
-    {
-        string str;
-        cin >> str;
+//	while(1)
+	{
+		string str;
+		cin >> str;
 
-        string main = "CODEFORCES";
+		string main = "CODEFORCES";
 
-        bool flag[10] = {0};
-
-
-        bool ans = false;
-
-        for(int i = 0; i < str.size(); i++)
+		bool flag[10] = {0};
 
 
-        if(!ans)
-        {
+		bool ans = false;
 
-            int ind = 0;
-            for(int i = 0; i < str.size(); i++)
-            {
-                if( str[i] == main[i] ) flag[ind++] = 1;
-                else break;
-            }
+		for(int i = 0; i < str.size(); i++)
 
-            for(int i = str.size() - 1,  j = 9; i >= 0 && j >= 0 && j >= ind; i--, j--)
-            {
-                if( str[i] == main[j] ) flag[j] = 1;
-                else break;
-            }
 
-            for(int i = 0; i < 10; i++)
-            {
-                if(!flag[i] )
-                {
-                    ans = false;
-                    break;
-                }
-                else ans = true;
+		if(!ans)
+		{
 
-            }
+			int ind = 0;
+			for(int i = 0; i < str.size(); i++)
+			{
+				if( str[i] == main[i] ) flag[ind++] = 1;
+				else break;
+			}
 
-        }
-        if(ans) cout<<"YES";
-        else cout<<"NO";
+			for(int i = str.size() - 1,  j = 9; i >= 0 && j >= 0 && j >= ind; i--, j--)
+			{
+				if( str[i] == main[j] ) flag[j] = 1;
+				else break;
+			}
 
-        cout<<endl;
-    }
+			for(int i = 0; i < 10; i++)
+			{
+				if(!flag[i] )
+				{
+					ans = false;
+					break;
+				}
+				else ans = true;
 
-    return 0;
+			}
+
+		}
+		if(ans) cout<<"YES";
+		else cout<<"NO";
+
+		cout<<endl;
+	}
+
+	return 0;
 }

@@ -23,10 +23,10 @@ pair <int, int> c;
 
 bool online( pair <int, int> p1, pair<int, int> p)
 {
-    long long re = (long long ) (p.first - p1.first) * (p1.second - c.second) - (long long ) (p1.first - c.first) * (p.second - p1.second);
+	long long re = (long long ) (p.first - p1.first) * (p1.second - c.second) - (long long ) (p1.first - c.first) * (p.second - p1.second);
 
-        if( re ) return false;
-        else return true;
+		if( re ) return false;
+		else return true;
 }
 
 
@@ -34,37 +34,37 @@ bool online( pair <int, int> p1, pair<int, int> p)
 
 int main()
 {
-    vector <pair<int,int> > slop;
+	vector <pair<int,int> > slop;
 
-    int n;
+	int n;
 
-    scanf("%d %d %d", &n, &c.first, &c.second);
+	scanf("%d %d %d", &n, &c.first, &c.second);
 
-    pair<int , int> x;
-
-
-    while(n--)
-    {
-        scanf("%d %d", &x.first, &x.second);
-
-        int len = slop.size();
-
-        bool flag = false;
-
-        for( int i = 0; i < len; i++)
-        {
-            flag = online( slop[i], x);
-
-            if( flag ) break;
-        }
-
-//        cout<<flag<<endl;
-        if( flag == false)
-
-            slop.push_back(x);
-    }
+	pair<int , int> x;
 
 
-    printf("%d", slop.size());
-    return 0;
+	while(n--)
+	{
+		scanf("%d %d", &x.first, &x.second);
+
+		int len = slop.size();
+
+		bool flag = false;
+
+		for( int i = 0; i < len; i++)
+		{
+			flag = online( slop[i], x);
+
+			if( flag ) break;
+		}
+
+//		cout<<flag<<endl;
+		if( flag == false)
+
+			slop.push_back(x);
+	}
+
+
+	printf("%d", slop.size());
+	return 0;
 }

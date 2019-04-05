@@ -23,23 +23,23 @@ using namespace std;
 int main()
 {
 
-    pair <int , int > varda;
+	pair <int , int > varda;
 
-    int step;
+	int step;
 
-    scanf("%d %d %d", &varda.first, &varda.second, &step);
-
-
-    int mini = abs(varda.first)+ abs(varda.second);
+	scanf("%d %d %d", &varda.first, &varda.second, &step);
 
 
-    if( mini > step) puts("No");
-    else
-    {
-        if(mini % 2 == step % 2 )
-        puts("Yes");
+	int mini = abs(varda.first)+ abs(varda.second);
 
-        else puts("No");
-    }
-    return 0;
+
+	if( mini > step) puts("No");
+	else
+	{
+		if(mini % 2 == step % 2 )
+		puts("Yes");
+
+		else puts("No");
+	}
+	return 0;
 }

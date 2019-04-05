@@ -22,69 +22,69 @@ using namespace std;
 
 int main()
 {
-    int n, m;
+	int n, m;
 
 
-    scanf("%d %d", &n, &m);
+	scanf("%d %d", &n, &m);
 
-    bool boy[n], girl[m];
+	bool boy[n], girl[m];
 
-    for( int i = 0; i < n; i++) boy[i] = false;
-    for( int i = 0; i < m; i++) girl[i] = false;
-
-
-    int h, i;
-
-    scanf("%d", &h);
-
-    while(h--)
-    {
-        scanf("%d", &i);
-
-        boy[i] = true;
-    }
-    scanf("%d", &h);
-
-    while(h--)
-    {
-        scanf("%d", &i);
-
-        girl[i] = true;
-    }
-
-    int limit = m * n;
-
-    for( i = 0 ; i < limit * 2; i++)
-    {
-        if(boy[i%n] || girl[i%m])
-        {
-            boy[i%n] = true;
-            girl[i%m] = true;
-        }
-
-        printf("%d %d\t%d %d\n", i%n, boy[i%n], i%m, girl[i%m]);
-    }
+	for( int i = 0; i < n; i++) boy[i] = false;
+	for( int i = 0; i < m; i++) girl[i] = false;
 
 
-    bool flag = true;
+	int h, i;
 
-    for( i = 0 ; i < n && flag; i++)
-    {
-        printf("%d %d\n", i, boy[i]);
-        flag = boy[i];
-    }
+	scanf("%d", &h);
 
-    for( i = 0 ; i < m && flag; i++)
-    {
+	while(h--)
+	{
+		scanf("%d", &i);
 
-        printf("%d %d\n", i, girl[i]);
-        flag = girl[i];
-    }
+		boy[i] = true;
+	}
+	scanf("%d", &h);
+
+	while(h--)
+	{
+		scanf("%d", &i);
+
+		girl[i] = true;
+	}
+
+	int limit = m * n;
+
+	for( i = 0 ; i < limit * 2; i++)
+	{
+		if(boy[i%n] || girl[i%m])
+		{
+			boy[i%n] = true;
+			girl[i%m] = true;
+		}
+
+		printf("%d %d\t%d %d\n", i%n, boy[i%n], i%m, girl[i%m]);
+	}
 
 
-    if(flag) puts("Yes");
-    else puts("No");
+	bool flag = true;
+
+	for( i = 0 ; i < n && flag; i++)
+	{
+		printf("%d %d\n", i, boy[i]);
+		flag = boy[i];
+	}
+
+	for( i = 0 ; i < m && flag; i++)
+	{
+
+		printf("%d %d\n", i, girl[i]);
+		flag = girl[i];
+	}
 
 
-    return 0;
+	if(flag) puts("Yes");
+	else puts("No");
+
+
+	return 0;
 }

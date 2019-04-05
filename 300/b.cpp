@@ -25,42 +25,42 @@ using namespace std;
 
 int main()
 {
-    string str;
+	string str;
 
-    cin >> str;
+	cin >> str;
 
-    vector < int > out;
+	vector < int > out;
 
-    int temp = 0;
+	int temp = 0;
 
-    while(1)
-    {
-        int i;
-        for( i = 0; i < str.size(); i++)
-            if(str[i] != '0' ) break;
+	while(1)
+	{
+		int i;
+		for( i = 0; i < str.size(); i++)
+			if(str[i] != '0' ) break;
 
-        if( i == str.size() ) break;
+		if( i == str.size() ) break;
 
-        temp = 0;
-        for( int i = 0; i < str.size(); i++)
-        {
-            if(str[i] != '0' )
-            {
-                temp = temp * 10  + 1;
+		temp = 0;
+		for( int i = 0; i < str.size(); i++)
+		{
+			if(str[i] != '0' )
+			{
+				temp = temp * 10  + 1;
 
-                str[i]--;
-            }
-            else temp = temp * 10  + 0;
+				str[i]--;
+			}
+			else temp = temp * 10  + 0;
 
-        }
-        out.push_back(temp);
-//            cout<<out.size()<<endl;
-    }
+		}
+		out.push_back(temp);
+//			cout<<out.size()<<endl;
+	}
 
-    cout<<out.size()<<endl;
+	cout<<out.size()<<endl;
 
-    for(int i = 0; i < out.size(); i++) cout<<out[i] <<" ";
+	for(int i = 0; i < out.size(); i++) cout<<out[i] <<" ";
 
 
-    return 0;
+	return 0;
 }

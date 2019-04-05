@@ -30,9 +30,9 @@ int main()
 
 	cin>>n>>k;
 
-    int cont = 0;
+	int cont = 0;
 
-    for(int i = 1; i <= 2*n; i += 2)
+	for(int i = 1; i <= 2*n; i += 2)
 	{
 		if(cont < k)
 		{
@@ -44,5 +44,5 @@ int main()
 	}
 
 //	main();
-    return 0;
+	return 0;
 }

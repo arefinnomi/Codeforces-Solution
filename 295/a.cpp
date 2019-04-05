@@ -26,44 +26,44 @@ using namespace std;
 
 int main()
 {
-    //while(1)
-    {
-        bool flag = true;
+	//while(1)
+	{
+		bool flag = true;
 
-        bool ch_flag[26] = {false};
+		bool ch_flag[26] = {false};
 
-        int n;
-        char ch;
+		int n;
+		char ch;
 
-        scanf("%d", &n);
-        getchar();
+		scanf("%d", &n);
+		getchar();
 
-        while( n--)
-        {
-            scanf("%c", &ch);
-            if( isalpha(ch))
-            {
-                if( islower(ch ))  ch -= 'a';
-                else if(isupper( ch)) ch -= 'A';
-                ch_flag[ch] = true;
-            }
+		while( n--)
+		{
+			scanf("%c", &ch);
+			if( isalpha(ch))
+			{
+				if( islower(ch ))  ch -= 'a';
+				else if(isupper( ch)) ch -= 'A';
+				ch_flag[ch] = true;
+			}
 
 
 
-        }
+		}
 
-        for( int i = 0; i < 26; i++)
-        {
-            if( ch_flag[i] == false)
-            {
-                flag = false;
-                break;
-            }
+		for( int i = 0; i < 26; i++)
+		{
+			if( ch_flag[i] == false)
+			{
+				flag = false;
+				break;
+			}
 
-        }
-        if( flag) puts("YES");
-        else puts("NO");
-    }
+		}
+		if( flag) puts("YES");
+		else puts("NO");
+	}
 
-    return 0;
+	return 0;
 }

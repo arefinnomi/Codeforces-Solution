@@ -26,41 +26,41 @@ using namespace std;
 
 int main()
 {
-    int n, sum;
+	int n, sum;
 
-    cin>>n>>sum;
+	cin>>n>>sum;
 
-    int MIN[n], MAX[n];
+	int MIN[n], MAX[n];
 
-    for(int i = 0; i < n; i++)
-    {
-        cin>>MIN[i]>>MAX[i];
-
-
-    }
+	for(int i = 0; i < n; i++)
+	{
+		cin>>MIN[i]>>MAX[i];
 
 
-    int day[n];
-    int cumulative_min[n], cumulative_max[n];
-
-//    for(int i = 0; i < n; i++) for(int j = i + 1 ; j < n; j++)	if( MIN[i] > MIN[j]) swap(MIN[i], MIN[j]), swap(MAX[i], MAX[j]);
-    partial_sum(MIN, MIN+n, cumulative_min);
-    partial_sum(MAX, MAX+n, cumulative_max);
+	}
 
 
-    if( cumulative_max[n-1] < sum || cumulative_min[n-1] > sum)
-    {
-        cout<<"NO"<<endl;
-        return 0;
-    }
+	int day[n];
+	int cumulative_min[n], cumulative_max[n];
 
-    cout<<"YES"<<endl;
+//	for(int i = 0; i < n; i++) for(int j = i + 1 ; j < n; j++)	if( MIN[i] > MIN[j]) swap(MIN[i], MIN[j]), swap(MAX[i], MAX[j]);
+	partial_sum(MIN, MIN+n, cumulative_min);
+	partial_sum(MAX, MAX+n, cumulative_max);
 
-    int temp = sum;
+
+	if( cumulative_max[n-1] < sum || cumulative_min[n-1] > sum)
+	{
+		cout<<"NO"<<endl;
+		return 0;
+	}
+
+	cout<<"YES"<<endl;
+
+	int temp = sum;
 
 	int store[n];
 
-    for(int i = n-1 ; i; i--)
+	for(int i = n-1 ; i; i--)
 	{
 		for( int x = MAX[i]; x >=  MIN[i]; x--)
 		{
@@ -78,5 +78,5 @@ int main()
 
 	for(int i = 0; i < n; i++)cout<<store[i]<<" ";
 //	main();
-    return 0;
+	return 0;
 }

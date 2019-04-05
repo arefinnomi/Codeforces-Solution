@@ -33,18 +33,18 @@ int main()
 {
 	int a, b;
 
-    int k,m;
+	int k,m;
 
-    cin>>a>>b>>k>>m;
-
-
-    int ary1[a], ary2[b];
-    for(int i = 0; i < a; i++) scanf("%d", ary1 + i);
-    for(int i = 0; i < b; i++) scanf("%d", ary2 + i);
+	cin>>a>>b>>k>>m;
 
 
-    if( ary1[k-1] < ary2[b-m]) cout<<"YES\n";
-    else cout<<"NO\n";
+	int ary1[a], ary2[b];
+	for(int i = 0; i < a; i++) scanf("%d", ary1 + i);
+	for(int i = 0; i < b; i++) scanf("%d", ary2 + i);
 
-    return 0;
+
+	if( ary1[k-1] < ary2[b-m]) cout<<"YES\n";
+	else cout<<"NO\n";
+
+	return 0;
 }

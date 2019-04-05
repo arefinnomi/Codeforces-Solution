@@ -34,29 +34,29 @@ int day[50] ;
 
 int main()
 {
-    int n;
-    cin>>n;
+	int n;
+	cin>>n;
 
 
-    int x, y;
-    bool h[50] = {1}, v[50] = {1};
+	int x, y;
+	bool h[50] = {1}, v[50] = {1};
 
-    for(int i = 0; i < n; i++) h[i] = 1, v[i] = 1;
+	for(int i = 0; i < n; i++) h[i] = 1, v[i] = 1;
 
-    for(int i = 0; i < n * n; i++)
-    {
-        cin>>x>>y;
+	for(int i = 0; i < n * n; i++)
+	{
+		cin>>x>>y;
 
-        if( h[x-1] && v[y-1] )
-        {
-        	cout<<i+1<<" ";
+		if( h[x-1] && v[y-1] )
+		{
+			cout<<i+1<<" ";
 
-            h[x-1] = 0;
-            v[y-1] = 0;
-        }
-    }
+			h[x-1] = 0;
+			v[y-1] = 0;
+		}
+	}
 
 
 
-    return 0;
+	return 0;
 }

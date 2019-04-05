@@ -31,33 +31,33 @@ using namespace std;
 
 int main()
 {
-    int temp;
+	int temp;
 
-    int n;
+	int n;
 
-    cin>>n;
+	cin>>n;
 
-    int ary[2*n+7];
+	int ary[2*n+7];
 
-    for(int i = 0; i < 2*n + 7; i++) ary[i] = 0;
+	for(int i = 0; i < 2*n + 7; i++) ary[i] = 0;
 
 
-    vector < pair < int , pair < int, int >  > > store;
+	vector < pair < int , pair < int, int >  > > store;
 
-    for(int i = 2; i <= n * 2; i++)
-    {
-        for(int j = 1 ; j < i; j++)
-        {
-            cin>>temp;
-            store.push_back( make_pair(temp, make_pair(i,j)));
-        }
-    }
-    sort(store.begin(), store.end());
+	for(int i = 2; i <= n * 2; i++)
+	{
+		for(int j = 1 ; j < i; j++)
+		{
+			cin>>temp;
+			store.push_back( make_pair(temp, make_pair(i,j)));
+		}
+	}
+	sort(store.begin(), store.end());
 
-    int x, y;
-    int value;
+	int x, y;
+	int value;
 
-    for(int i = store.size()-1; i >= 0; i--)
+	for(int i = store.size()-1; i >= 0; i--)
 	{
 		value = store[i].first;
 		x = store[i].second.first;
@@ -73,5 +73,5 @@ int main()
 
 	for(int i = 1; i <= 2 * n; i++) cout<<ary[i]<<" ";
 
-    return 0;
+	return 0;
 }

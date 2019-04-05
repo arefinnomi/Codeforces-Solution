@@ -49,5 +49,5 @@ int main()
 	cout<<maxim<<endl;
 
 //	main();
-    return 0;
+	return 0;
 }

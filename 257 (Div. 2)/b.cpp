@@ -25,12 +25,12 @@ using namespace std;
 long long mod( long long num, long long m)
 {
 
-    while( num < 0)
-    {
-        num += m;
-    }
+	while( num < 0)
+	{
+		num += m;
+	}
 
-    return num % m;
+	return num % m;
 }
 
 int main()
@@ -49,5 +49,5 @@ int main()
 	if( quary == 0) quary = 6;
 
 	cout<<mod(ary[quary], 1000000007)<<endl;
-    return 0;
+	return 0;
 }

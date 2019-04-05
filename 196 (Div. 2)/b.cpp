@@ -46,5 +46,5 @@ int main()
 
 	cout<<nomi/divi<<"/"<<denomi/divi<<endl;
 
-    return 0;
+	return 0;
 }

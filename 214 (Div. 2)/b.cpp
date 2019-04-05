@@ -51,5 +51,5 @@ int main()
 
 	cout<<mini+1<<endl;
 //	main();
-    return 0;
+	return 0;
 }

@@ -30,49 +30,49 @@ int i;
 
 struct my
 {
-    bool operator () ( const pair < int , int > &p1,  const pair < int , int > &p2)
-    {
+	bool operator () ( const pair < int , int > &p1,  const pair < int , int > &p2)
+	{
 		if( p1.Y > p2.Y ) return 1;
 		else if( p1.Y == p2.Y) if( p1.X > p2.X ) return 1;
 
 		return 0;
-    }
+	}
 };
 
 
 int main()
 {
-    int n;
+	int n;
 
-    cin>>n;
-
-
-    vector < pair <int ,  int > > str;
-
-    int temp1, temp2;
-    for(int i = 0; i < n; i++)
-    {
-        cin>>temp1>>temp2;
-        str.push_back(make_pair(temp1, temp2));
-    }
-
-    sort( str.begin(), str.end(), my() );
-
-    int point = 0, time = 1;
+	cin>>n;
 
 
+	vector < pair <int ,  int > > str;
 
+	int temp1, temp2;
+	for(int i = 0; i < n; i++)
+	{
+		cin>>temp1>>temp2;
+		str.push_back(make_pair(temp1, temp2));
+	}
 
-    for(int i = 0; i < n && time; i++, time--)
-    {
-        point += str[i].first;
-        time += str[i].second;
-    }
+	sort( str.begin(), str.end(), my() );
+
+	int point = 0, time = 1;
 
 
 
-    cout<<point<<endl;
+
+	for(int i = 0; i < n && time; i++, time--)
+	{
+		point += str[i].first;
+		time += str[i].second;
+	}
+
+
+
+	cout<<point<<endl;
 
 //	main();
-    return 0;
+	return 0;
 }

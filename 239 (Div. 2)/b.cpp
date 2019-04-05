@@ -25,45 +25,45 @@ using namespace std;
 
 int main()
 {
-    int sheets[26] = {0};
+	int sheets[26] = {0};
 
-    char temp;
+	char temp;
 
-    while(1)
-    {
-        scanf("%c", &temp);
+	while(1)
+	{
+		scanf("%c", &temp);
 
-        if(temp == '\n') break;
+		if(temp == '\n') break;
 
-        sheets[temp-'a']++;
-    }
+		sheets[temp-'a']++;
+	}
 
-    int gadland[26] = {0};
-    while(1)
-    {
-        scanf("%c", &temp);
+	int gadland[26] = {0};
+	while(1)
+	{
+		scanf("%c", &temp);
 
-        if(temp == '\n') break;
+		if(temp == '\n') break;
 
-        gadland[temp-'a']++;
-    }
-
-
-    int cont = 0;
+		gadland[temp-'a']++;
+	}
 
 
-    for(int i = 0; i < 26; i++)
-    {
-        if( gadland[i] && sheets[i] == 0)
-        {
-            cont = 0;
-            break;
-        }
-        cont += min(sheets[i], gadland[i]);
-    }
+	int cont = 0;
 
-    if(cont) cout<<cont<<endl;
-    else cout<<-1<<endl;
+
+	for(int i = 0; i < 26; i++)
+	{
+		if( gadland[i] && sheets[i] == 0)
+		{
+			cont = 0;
+			break;
+		}
+		cont += min(sheets[i], gadland[i]);
+	}
+
+	if(cont) cout<<cont<<endl;
+	else cout<<-1<<endl;
 //	main();
-    return 0;
+	return 0;
 }
